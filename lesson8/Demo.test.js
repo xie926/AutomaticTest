@@ -36,7 +36,7 @@ test('测试 runCallBack2 返回值', () => {
   runCallBack2(func);
   runCallBack2(func);
   expect(func.mock.calls[0]).toEqual(['abd']); // 第一次调用参数是'abd'
-  expect(func).toBeCalledWith(['abd']); // 每一次调用的时候参数都是'and'
+  // expect(func).toBeCalledWith(['abd']); // 每一次调用的时候参数都是'and'
 
   // console.log(func.mock)
 })
@@ -48,7 +48,7 @@ test('测试 createObject', () => {
   console.log(func.mock);
 })
 
-test.only('测试 getData', async() => {
+test('测试 getData', async() => {
   axios.get.mockResolvedValueOnce({data: 'hello'});
   axios.get.mockResolvedValueOnce({data: 'world'});
   await getData().then((data) => {
