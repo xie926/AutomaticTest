@@ -11,7 +11,7 @@ function multi(a, b){
 }
 
 try{
-    module.export = { // node语法
+    module.export = { // node语法，index.html无法识别，所以在打开html文件时，回报异常
         add,
         minus,
         multi
