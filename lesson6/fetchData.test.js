@@ -16,7 +16,7 @@ test('fetchData 返回结果为{ success: true }', (done) => {
 // })
 
 // test('fetchData1 返回结果为404', () => {
-//   expect.assertions(1); // expect必须执行一次
+//   expect.assertions(1); // expect必须执行一次，如果要用catch，必须加上这一句话，因为如果接口有返回的值，那么压根不会走到catch这一步，导致我们的测试用例就会直接通过
 //   return fetchData1().catch(e => {
 //     expect(e.toString()).toMatch(/404/)
 //     // expect(e.toString().indexOf('404') > -1).toBe(true)

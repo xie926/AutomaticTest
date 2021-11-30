@@ -14,3 +14,9 @@ export const createObject = (classItem) => {
 export const getData = () => {
   return axios.get('./api').then(res => res.data)
 }
+
+export const forEach = (items, callback) => {
+  for (let index = 0; index < items.length; index++) {
+    callback(items[index]);
+  }
+}

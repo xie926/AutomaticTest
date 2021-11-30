@@ -2,7 +2,7 @@ import timer from './timer';
 
 
 beforeEach(() => {
-  jest.useFakeTimers(); // 只写这个没用
+  jest.useFakeTimers(); // 只写这个可能会出错，比如定时器是几百秒之后执行，会报“超时”的错误
 })
 
 
