@@ -10,7 +10,8 @@ module.exports = {
     "react-app-polyfill/jsdom" // 我们在测试的时候，准备一些polyfill垫片，对jsdom做一些补充，解决一些js的兼容性问题
   ],
   "setupFilesAfterEnv": [ // 当测试环境建立好之后，你想做一些其他的事情，你可以在这里面去做
-    "<rootDir>/src/setupTests.js"
+    "<rootDir>/src/setupTests.js",
+    "./node_modules/jest-enzyme/lib/index.js"
   ],
   "testMatch": [ // 当我们运行npm run test的时候，要执行一些测试文件，那我们通过什么方式来辨别哪些文件要做测试呢？这样通过一些正则做了一些声明
     "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",

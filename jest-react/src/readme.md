@@ -1,0 +1,3 @@
+## Enzyme
+只是面向dom的测试是具有局限性的，往往我们需要对组件中state与props中的状态正确性进行测试，由此引出Enzyme。
+Enzyme其实是对ReactDOM.render方法做了一层包装，提供一些额外的方法使我们能够更灵活的测试。
