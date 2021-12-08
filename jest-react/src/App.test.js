@@ -17,6 +17,7 @@ it('render without crashing', () => {
   const wrapper = shallow(<App />); // 只关注App组件的渲染，他的子组件可能只是用一个小标签来代替 -> 渲染速度快 -> 适用于单元测试
   // console.log(wrapper.debug()); // 写在expect前，这样他就能把App组件出现的错误以字符串的形式在控制台打印出来
   // const container = wrapper.find('.App')
+  expect(wrapper).toMatchSnapshot();
   const container = wrapper.find('[data-test="container"]') // find属性选择器，[data-test="container"]
   expect(container.length).toBe(1);
   expect(container.prop('title')).toBe('xie yan');
