@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../style.css';
 
 class Header extends Component {
   constructor(props){
@@ -29,8 +30,18 @@ class Header extends Component {
     const { value } = this.state;
 
     return(
-      <div>
-        <input data-test="input" value={value} onChange={this.handleInputChange} onKeyUp={this.handleInputKeyUp}/>
+      <div className="header">
+        <div className="header-content">
+          TodoList
+          <input
+            className="header-input"
+            data-test="input"
+            value={value}
+            onChange={this.handleInputChange}
+            onKeyUp={this.handleInputKeyUp}
+            placeholder="Todo"
+          />
+        </div>
       </div>
     )
   }

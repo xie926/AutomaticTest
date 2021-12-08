@@ -4,6 +4,12 @@ import Adapter from 'enzyme-adapter-react-16';
 import Header from '../../components/Header';
 Enzyme.configure({ adapter: new Adapter() });
 
+it('Header 渲染样式正常', () => {
+  // 当组件样式不再频繁发生变化的时候，我们可以记录一个快照，当我们在未来修改，就会测试失败，提醒你要验证一下修改过后的样式是否符合预期
+  const wrapper = shallow(<Header />);
+  expect(wrapper).toMatchSnapshot();
+});
+
 it('Header 组件应该包含一个 input 框', () => {
   const wrapper = shallow(<Header />);
   const inputElem = wrapper.find("[data-test='input']");
