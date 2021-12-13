@@ -35,7 +35,7 @@ class Header extends Component {
           TodoList
           <input
             className="header-input"
-            data-test="input"
+            data-test="header-input"
             value={value}
             onChange={this.handleInputChange}
             onKeyUp={this.handleInputKeyUp}
