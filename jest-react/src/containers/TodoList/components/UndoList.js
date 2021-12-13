@@ -4,7 +4,7 @@ import '../style.css';
 class UndoList extends Component {
 
   render(){
-    const { deleteItem, list } = this.props;
+    const { deleteItem, list, changeStatus, handleBlur, valueChange } = this.props;
     return(
       <div className="undoList">
         <div className="undoList-title">
@@ -15,12 +15,18 @@ class UndoList extends Component {
           {
             list.map((item, index) => {
               return(
-                <li key={`${item}-${index}`} data-test="list-item" className="item">
-                  {item}
+                <li key={`${item}-${index}`} data-test="list-item" className="item" onClick={() => changeStatus(index)}>
+                  {
+                    item.status === 'div' ? item.value :
+                    <input className='undoList-input' value={item.value} type="text" data-test="input" onBlur={() => handleBlur(index)} onChange={(e) => valueChange(index, e.target.value)}/>
+                  }
                   <span
                     className="delBtn"
                     data-test="delete-item"
-                    onClick={() => deleteItem(index)}
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      deleteItem(index)
+                    }}
                   >
                     -
                   </span>
