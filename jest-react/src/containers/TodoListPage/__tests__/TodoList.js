@@ -1,9 +1,9 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import { findTestWrapper } from '../../../../utils/testUtils';
+import { findTestWrapper } from '../../../utils/testUtils';
 import { Provider } from 'react-redux';
-import store from '../../../../store/createStore'
-import TodoList from '../../index';
+import store from '../../../store/createStore'
+import TodoList from '../index';
 import axios from 'axios';
 
 beforeEach(() => {

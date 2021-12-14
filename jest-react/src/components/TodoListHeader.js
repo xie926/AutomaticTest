@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import '../style.css';
+import '../containers/TodoListPage/style.css';
 import { connect } from 'react-redux';
-import { actions } from '../store';
+import { actions } from '../containers/TodoListPage/store';
 
 class Header extends Component {
   constructor(props){

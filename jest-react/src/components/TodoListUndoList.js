@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../style.css';
+import '../containers/TodoListPage/style.css';
 
 class UndoList extends Component {
 

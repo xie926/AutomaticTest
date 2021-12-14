@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Header from './components/Header';
-import UndoList from './components/UndoList';
+import Header from '../../components/TodoListHeader';
+import UndoList from '../../components/TodoListUndoList';
 
 class TodoList extends Component {
 
