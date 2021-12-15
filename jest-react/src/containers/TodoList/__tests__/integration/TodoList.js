@@ -4,7 +4,7 @@ import { findTestWrapper } from '../../../../utils/testUtils';
 import { Provider } from 'react-redux';
 import store from '../../../../store/createStore'
 import TodoList from '../../index';
-import axios from 'axios';
+import axios from '../../__mocks__/axios';
 
 beforeEach(() => {
   axios.success = true
